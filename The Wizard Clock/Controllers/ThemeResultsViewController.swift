@@ -11,6 +11,7 @@ import UIKit
 class ThemeResultsViewController: UIViewController {
 
     var themeName: String = "Nature"
+    var clockTimer: Timer?
     
     func drawImage(imageName: String, position: CGRect){
         let image = UIImage(named: imageName)
@@ -33,10 +34,8 @@ class ThemeResultsViewController: UIViewController {
         }
         return theme
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    
+    @objc func drawClock(){
         let theme = getTheme(themeName: themeName)
         
         let clockTime = ClockTime()
@@ -52,6 +51,15 @@ class ThemeResultsViewController: UIViewController {
         drawImage(imageName: backgroundName, position: screenSize)
         drawImage(imageName: hoursName, position: hoursFrame)
         drawImage(imageName: minutesName, position: minutesFrame)
+        
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        drawClock()
+        
+        clockTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(drawClock), userInfo: nil, repeats: true)
     }
     
     @IBAction func tapPressed(_ sender: UITapGestureRecognizer) {
