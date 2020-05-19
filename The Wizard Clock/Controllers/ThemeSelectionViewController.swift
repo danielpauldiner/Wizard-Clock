@@ -11,6 +11,7 @@ import UIKit
 class ThemeSelectionViewController: UIViewController {
 
     var themeName = "Nature"
+    var greyscale = false
     var bgName = "Default"
     var hrName = "Trees"
     var minName = "Sun"
@@ -21,7 +22,9 @@ class ThemeSelectionViewController: UIViewController {
     
     @IBOutlet weak var bgDefaultButton: UIButton!
     
-    @IBOutlet weak var hrTreesButton: UIButton!
+
+    @IBOutlet weak var greyscaleYesButton: UIButton!
+    @IBOutlet weak var greyscaleNobutton: UIButton!
     
     @IBOutlet weak var minSunButton: UIButton!
     @IBOutlet weak var minBirdButton: UIButton!
@@ -46,10 +49,15 @@ class ThemeSelectionViewController: UIViewController {
         bgName = sender.currentTitle!
     }
     
-    @IBAction func hrChanged(_ sender: UIButton) {
-        hrTreesButton.isSelected = false
+    @IBAction func greyscaleChanged(_ sender: UIButton) {
+        greyscaleYesButton.isSelected = false
+        greyscaleNobutton.isSelected = false
         sender.isSelected = true
-        hrName = sender.currentTitle!
+        if sender == greyscaleYesButton{
+            greyscale = true
+        }else{
+            greyscale = false
+        }
     }
     
     @IBAction func minChanged(_ sender: UIButton) {
@@ -67,6 +75,7 @@ class ThemeSelectionViewController: UIViewController {
         if segue.identifier == "goToResults" {
             let destinationVC = segue.destination as! ThemeResultsViewController
             destinationVC.themeName = themeName
+            destinationVC.greyscale = greyscale
         }
     }
     
