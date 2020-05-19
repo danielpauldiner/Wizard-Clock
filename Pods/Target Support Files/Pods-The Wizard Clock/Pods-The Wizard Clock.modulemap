@@ -1,0 +1,6 @@
+framework module Pods_The_Wizard_Clock {
+  umbrella header "Pods-The Wizard Clock-umbrella.h"
+
+  export *
+  module * { export * }
+}

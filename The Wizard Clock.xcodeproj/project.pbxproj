@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03692F5A24738E8500E5697F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03692F5924738E8500E5697F /* GoogleService-Info.plist */; };
+		038E8D922473436700002085 /* The Wizard ClockTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 653CD2A024551C22009D3A66 /* The Wizard ClockTests.xctest */; };
+		038E8D932473436B00002085 /* The Wizard ClockUITests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 653CD2AB24551C22009D3A66 /* The Wizard ClockUITests.xctest */; };
 		03B2654F24580D7A0033C2D9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B2654E24580D7A0033C2D9 /* Theme.swift */; };
 		03B265552458195C0033C2D9 /* ThemeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B265542458195C0033C2D9 /* ThemeSelectionViewController.swift */; };
 		03B26557245819920033C2D9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B26556245819920033C2D9 /* LoginViewController.swift */; };
@@ -23,6 +26,9 @@
 		65CF1120245B53AB003666C2 /* NatureTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CF111F245B53AB003666C2 /* NatureTheme.swift */; };
 		65CF1122245CB9D4003666C2 /* BinaryTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CF1121245CB9D4003666C2 /* BinaryTheme.swift */; };
 		65CF1124245E589F003666C2 /* JerseyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CF1123245E589F003666C2 /* JerseyTheme.swift */; };
+		86DB0423A4CF1701160020F7 /* Pods_The_Wizard_Clock_The_Wizard_ClockUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D523161DDE429A433A833314 /* Pods_The_Wizard_Clock_The_Wizard_ClockUITests.framework */; };
+		8F45A79B0371F3507FEF1B36 /* Pods_The_Wizard_ClockTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CC4FD1726293D95EE06F71 /* Pods_The_Wizard_ClockTests.framework */; };
+		DC5F12C1D3A8B2CA787D5415 /* Pods_The_Wizard_Clock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50C2D75684D18BBE6CF5617 /* Pods_The_Wizard_Clock.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +49,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03692F5924738E8500E5697F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		03B2654E24580D7A0033C2D9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		03B265542458195C0033C2D9 /* ThemeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionViewController.swift; sourceTree = "<group>"; };
 		03B26556245819920033C2D9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		03B26558245819B30033C2D9 /* ThemeResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeResultsViewController.swift; sourceTree = "<group>"; };
+		16CC4FD1726293D95EE06F71 /* Pods_The_Wizard_ClockTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Wizard_ClockTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26929EA3E16A8964B58C2DC7 /* Pods-The Wizard ClockTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Wizard ClockTests.debug.xcconfig"; path = "Target Support Files/Pods-The Wizard ClockTests/Pods-The Wizard ClockTests.debug.xcconfig"; sourceTree = "<group>"; };
+		491B4514B3F731866CA43120 /* Pods-The Wizard ClockTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Wizard ClockTests.release.xcconfig"; path = "Target Support Files/Pods-The Wizard ClockTests/Pods-The Wizard ClockTests.release.xcconfig"; sourceTree = "<group>"; };
+		528CF9A399B3C0451546E3BA /* Pods-The Wizard Clock-The Wizard ClockUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Wizard Clock-The Wizard ClockUITests.debug.xcconfig"; path = "Target Support Files/Pods-The Wizard Clock-The Wizard ClockUITests/Pods-The Wizard Clock-The Wizard ClockUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		653CD28A24551C0E009D3A66 /* The Wizard Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Wizard Clock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		653CD28D24551C0E009D3A66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		653CD28F24551C0E009D3A66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +76,11 @@
 		65CF111F245B53AB003666C2 /* NatureTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatureTheme.swift; sourceTree = "<group>"; };
 		65CF1121245CB9D4003666C2 /* BinaryTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTheme.swift; sourceTree = "<group>"; };
 		65CF1123245E589F003666C2 /* JerseyTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JerseyTheme.swift; sourceTree = "<group>"; };
+		6F5B1001897D68B4397C0E2B /* Pods-The Wizard Clock-The Wizard ClockUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Wizard Clock-The Wizard ClockUITests.release.xcconfig"; path = "Target Support Files/Pods-The Wizard Clock-The Wizard ClockUITests/Pods-The Wizard Clock-The Wizard ClockUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A50C2D75684D18BBE6CF5617 /* Pods_The_Wizard_Clock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Wizard_Clock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A59CF77A296354551A18A3B3 /* Pods-The Wizard Clock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Wizard Clock.debug.xcconfig"; path = "Target Support Files/Pods-The Wizard Clock/Pods-The Wizard Clock.debug.xcconfig"; sourceTree = "<group>"; };
+		A80E8A20B5A8E762F9C5CC28 /* Pods-The Wizard Clock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Wizard Clock.release.xcconfig"; path = "Target Support Files/Pods-The Wizard Clock/Pods-The Wizard Clock.release.xcconfig"; sourceTree = "<group>"; };
+		D523161DDE429A433A833314 /* Pods_The_Wizard_Clock_The_Wizard_ClockUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Wizard_Clock_The_Wizard_ClockUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC5F12C1D3A8B2CA787D5415 /* Pods_The_Wizard_Clock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F45A79B0371F3507FEF1B36 /* Pods_The_Wizard_ClockTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86DB0423A4CF1701160020F7 /* Pods_The_Wizard_Clock_The_Wizard_ClockUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +142,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		2BA2FB6164FEB30C0152BD31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A50C2D75684D18BBE6CF5617 /* Pods_The_Wizard_Clock.framework */,
+				D523161DDE429A433A833314 /* Pods_The_Wizard_Clock_The_Wizard_ClockUITests.framework */,
+				16CC4FD1726293D95EE06F71 /* Pods_The_Wizard_ClockTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		653CD28124551C0E009D3A66 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +159,8 @@
 				653CD2A324551C22009D3A66 /* The Wizard ClockTests */,
 				653CD2AE24551C22009D3A66 /* The Wizard ClockUITests */,
 				653CD28B24551C0E009D3A66 /* Products */,
+				AE89EC0E5F3489959BF5AC74 /* Pods */,
+				2BA2FB6164FEB30C0152BD31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,6 +185,7 @@
 				653CD29624551C21009D3A66 /* Assets.xcassets */,
 				653CD29824551C21009D3A66 /* LaunchScreen.storyboard */,
 				653CD29B24551C21009D3A66 /* Info.plist */,
+				03692F5924738E8500E5697F /* GoogleService-Info.plist */,
 			);
 			path = "The Wizard Clock";
 			sourceTree = "<group>";
@@ -176,6 +208,20 @@
 			path = "The Wizard ClockUITests";
 			sourceTree = "<group>";
 		};
+		AE89EC0E5F3489959BF5AC74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A59CF77A296354551A18A3B3 /* Pods-The Wizard Clock.debug.xcconfig */,
+				A80E8A20B5A8E762F9C5CC28 /* Pods-The Wizard Clock.release.xcconfig */,
+				528CF9A399B3C0451546E3BA /* Pods-The Wizard Clock-The Wizard ClockUITests.debug.xcconfig */,
+				6F5B1001897D68B4397C0E2B /* Pods-The Wizard Clock-The Wizard ClockUITests.release.xcconfig */,
+				26929EA3E16A8964B58C2DC7 /* Pods-The Wizard ClockTests.debug.xcconfig */,
+				491B4514B3F731866CA43120 /* Pods-The Wizard ClockTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 653CD2B424551C22009D3A66 /* Build configuration list for PBXNativeTarget "The Wizard Clock" */;
 			buildPhases = (
+				79DD84C8522F5EF03D1AB19C /* [CP] Check Pods Manifest.lock */,
 				653CD28624551C0E009D3A66 /* Sources */,
 				653CD28724551C0E009D3A66 /* Frameworks */,
 				653CD28824551C0E009D3A66 /* Resources */,
+				F0AFA5FE3CFE32552E68097D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -200,6 +248,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 653CD2B724551C22009D3A66 /* Build configuration list for PBXNativeTarget "The Wizard ClockTests" */;
 			buildPhases = (
+				4494966683F348E2133D522E /* [CP] Check Pods Manifest.lock */,
 				653CD29C24551C22009D3A66 /* Sources */,
 				653CD29D24551C22009D3A66 /* Frameworks */,
 				653CD29E24551C22009D3A66 /* Resources */,
@@ -218,9 +267,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 653CD2BA24551C22009D3A66 /* Build configuration list for PBXNativeTarget "The Wizard ClockUITests" */;
 			buildPhases = (
+				34E5EDB8D8FA950A2B61FD99 /* [CP] Check Pods Manifest.lock */,
 				653CD2A724551C22009D3A66 /* Sources */,
 				653CD2A824551C22009D3A66 /* Frameworks */,
 				653CD2A924551C22009D3A66 /* Resources */,
+				25F562A16E88C678DFF3843F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				653CD2BD2455C327009D3A66 /* Main.storyboard in Resources */,
+				03692F5A24738E8500E5697F /* GoogleService-Info.plist in Resources */,
 				653CD29A24551C21009D3A66 /* LaunchScreen.storyboard in Resources */,
 				653CD29724551C21009D3A66 /* Assets.xcassets in Resources */,
 			);
@@ -290,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				038E8D922473436700002085 /* The Wizard ClockTests.xctest in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,10 +350,114 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				038E8D932473436B00002085 /* The Wizard ClockUITests.xctest in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25F562A16E88C678DFF3843F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-The Wizard Clock-The Wizard ClockUITests/Pods-The Wizard Clock-The Wizard ClockUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-The Wizard Clock-The Wizard ClockUITests/Pods-The Wizard Clock-The Wizard ClockUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-The Wizard Clock-The Wizard ClockUITests/Pods-The Wizard Clock-The Wizard ClockUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34E5EDB8D8FA950A2B61FD99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-The Wizard Clock-The Wizard ClockUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4494966683F348E2133D522E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-The Wizard ClockTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79DD84C8522F5EF03D1AB19C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-The Wizard Clock-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0AFA5FE3CFE32552E68097D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-The Wizard Clock/Pods-The Wizard Clock-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-The Wizard Clock/Pods-The Wizard Clock-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-The Wizard Clock/Pods-The Wizard Clock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		653CD28624551C0E009D3A66 /* Sources */ = {
@@ -488,47 +645,50 @@
 		};
 		653CD2B524551C22009D3A66 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A59CF77A296354551A18A3B3 /* Pods-The Wizard Clock.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5GFF6C8K95;
+				DEVELOPMENT_TEAM = 259Q2YYZY6;
 				INFOPLIST_FILE = "The Wizard Clock/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Team-Wizard-Clock.The-Wizard-Clock";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.oregonstate.wizard-clock";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
 		653CD2B624551C22009D3A66 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A80E8A20B5A8E762F9C5CC28 /* Pods-The Wizard Clock.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5GFF6C8K95;
+				DEVELOPMENT_TEAM = 259Q2YYZY6;
 				INFOPLIST_FILE = "The Wizard Clock/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Team-Wizard-Clock.The-Wizard-Clock";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.oregonstate.wizard-clock";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
 		653CD2B824551C22009D3A66 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26929EA3E16A8964B58C2DC7 /* Pods-The Wizard ClockTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5GFF6C8K95;
+				DEVELOPMENT_TEAM = 259Q2YYZY6;
 				INFOPLIST_FILE = "The Wizard ClockTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -546,11 +706,12 @@
 		};
 		653CD2B924551C22009D3A66 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 491B4514B3F731866CA43120 /* Pods-The Wizard ClockTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5GFF6C8K95;
+				DEVELOPMENT_TEAM = 259Q2YYZY6;
 				INFOPLIST_FILE = "The Wizard ClockTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -568,10 +729,11 @@
 		};
 		653CD2BB24551C22009D3A66 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 528CF9A399B3C0451546E3BA /* Pods-The Wizard Clock-The Wizard ClockUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5GFF6C8K95;
+				DEVELOPMENT_TEAM = 259Q2YYZY6;
 				INFOPLIST_FILE = "The Wizard ClockUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -588,10 +750,11 @@
 		};
 		653CD2BC24551C22009D3A66 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F5B1001897D68B4397C0E2B /* Pods-The Wizard Clock-The Wizard ClockUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5GFF6C8K95;
+				DEVELOPMENT_TEAM = 259Q2YYZY6;
 				INFOPLIST_FILE = "The Wizard ClockUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
