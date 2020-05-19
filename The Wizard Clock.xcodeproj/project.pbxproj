@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		03692F5A24738E8500E5697F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03692F5924738E8500E5697F /* GoogleService-Info.plist */; };
+		03692F5C2473A69400E5697F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03692F5B2473A69400E5697F /* RegisterViewController.swift */; };
+		03692F5E2473A6F600E5697F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03692F5D2473A6F600E5697F /* SignInViewController.swift */; };
 		038E8D922473436700002085 /* The Wizard ClockTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 653CD2A024551C22009D3A66 /* The Wizard ClockTests.xctest */; };
 		038E8D932473436B00002085 /* The Wizard ClockUITests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 653CD2AB24551C22009D3A66 /* The Wizard ClockUITests.xctest */; };
 		03B2654F24580D7A0033C2D9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B2654E24580D7A0033C2D9 /* Theme.swift */; };
@@ -50,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		03692F5924738E8500E5697F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		03692F5B2473A69400E5697F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		03692F5D2473A6F600E5697F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		03B2654E24580D7A0033C2D9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		03B265542458195C0033C2D9 /* ThemeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionViewController.swift; sourceTree = "<group>"; };
 		03B26556245819920033C2D9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				03B26556245819920033C2D9 /* LoginViewController.swift */,
 				03B265542458195C0033C2D9 /* ThemeSelectionViewController.swift */,
 				03B26558245819B30033C2D9 /* ThemeResultsViewController.swift */,
+				03692F5B2473A69400E5697F /* RegisterViewController.swift */,
+				03692F5D2473A6F600E5697F /* SignInViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -218,7 +224,6 @@
 				26929EA3E16A8964B58C2DC7 /* Pods-The Wizard ClockTests.debug.xcconfig */,
 				491B4514B3F731866CA43120 /* Pods-The Wizard ClockTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -467,7 +472,9 @@
 				65CF1124245E589F003666C2 /* JerseyTheme.swift in Sources */,
 				03B26557245819920033C2D9 /* LoginViewController.swift in Sources */,
 				653CD29224551C0E009D3A66 /* ViewController.swift in Sources */,
+				03692F5C2473A69400E5697F /* RegisterViewController.swift in Sources */,
 				03B2654F24580D7A0033C2D9 /* Theme.swift in Sources */,
+				03692F5E2473A6F600E5697F /* SignInViewController.swift in Sources */,
 				653CD28E24551C0E009D3A66 /* AppDelegate.swift in Sources */,
 				65CF1120245B53AB003666C2 /* NatureTheme.swift in Sources */,
 				03B265552458195C0033C2D9 /* ThemeSelectionViewController.swift in Sources */,
