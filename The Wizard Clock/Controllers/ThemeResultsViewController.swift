@@ -12,9 +12,16 @@ class ThemeResultsViewController: UIViewController {
 
     var themeName: String = "Nature"
     var clockTimer: Timer?
+    var greyscale: Bool = false
     
     func drawImage(imageName: String, position: CGRect){
-        let image = UIImage(named: imageName)
+        var image = UIImage(named: imageName)
+        if greyscale{
+            let originalCIImage = CIImage(image: image!)
+            let filter = CIFilter(name: "CIPhotoEffectNoir")
+            filter?.setValue(originalCIImage, forKey: kCIInputImageKey)
+            image = UIImage(ciImage: (filter?.outputImage)!)
+        }
         let imageView = UIImageView(image: image!)
         imageView.frame = position
         view.addSubview(imageView)

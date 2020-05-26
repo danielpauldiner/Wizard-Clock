@@ -293,25 +293,29 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1gk-Wn-5a1">
+
                                                                         <rect key="frame" x="148.5" y="8.5" width="90.5" height="108"/>
+
                                                                         <subviews>
-                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlA-Kb-Yeq" userLabel="Theme Jersey Button">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="90.5" height="30"/>
+                                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlA-Kb-Yeq" userLabel="Theme Jersey Button">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="90.5" height="38"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                                 <state key="normal" title="Jersey"/>
                                                                                 <connections>
                                                                                     <action selector="themeChange:" destination="h8q-kc-utt" eventType="touchUpInside" id="RnV-Jc-qOd"/>
                                                                                 </connections>
                                                                             </button>
-                                                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eP6-qt-cUK">
-                                                                                <rect key="frame" x="0.0" y="30" width="90.5" height="48"/>
+                                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eP6-qt-cUK">
+                                                                                <rect key="frame" x="0.0" y="38" width="90.5" height="48"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                                 <state key="normal" title="Nature"/>
                                                                                 <connections>
                                                                                     <action selector="themeChange:" destination="h8q-kc-utt" eventType="touchUpInside" id="EBc-pn-ZUl"/>
                                                                                 </connections>
                                                                             </button>
-                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9N-PO-4fJ" userLabel="Theme Binary Button">
-                                                                                <rect key="frame" x="0.0" y="78" width="90.5" height="30"/>
+                                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9N-PO-4fJ" userLabel="Theme Binary Button">
+                                                                                <rect key="frame" x="0.0" y="86" width="90.5" height="48"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                                 <state key="normal" title="Binary"/>
                                                                                 <connections>
                                                                                     <action selector="themeChange:" destination="h8q-kc-utt" eventType="touchUpInside" id="eeb-3A-6C3"/>
@@ -346,20 +350,24 @@
                                                         <rect key="frame" x="644" y="0.0" width="436" height="251"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MeA-M7-vML" userLabel="Hour Stack View">
+
                                                                 <rect key="frame" x="138" y="0.0" width="160" height="125.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zea-eC-Npg">
                                                                         <rect key="frame" x="0.0" y="44.5" width="70" height="36"/>
+
                                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
+
                                                                     <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGX-0h-OQN">
                                                                         <rect key="frame" x="90" y="38.5" width="70" height="48"/>
+
                                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                        <state key="normal" title="Trees"/>
+                                                                        <state key="normal" title="No"/>
                                                                         <connections>
-                                                                            <action selector="hrChanged:" destination="h8q-kc-utt" eventType="touchUpInside" id="3yH-C5-w7g"/>
+                                                                            <action selector="greyscaleChanged:" destination="h8q-kc-utt" eventType="touchUpInside" id="5ad-kn-GOa"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -441,7 +449,8 @@
                     <navigationItem key="navigationItem" id="j3U-2q-8KF"/>
                     <connections>
                         <outlet property="bgDefaultButton" destination="dp6-Bm-gtN" id="23f-bH-4Cv"/>
-                        <outlet property="hrTreesButton" destination="uGX-0h-OQN" id="OI9-u9-Hdt"/>
+                        <outlet property="greyscaleNobutton" destination="tkY-0S-N1a" id="U5V-Od-auz"/>
+                        <outlet property="greyscaleYesButton" destination="1Ny-v1-VAP" id="F1t-hf-Acp"/>
                         <outlet property="minBirdButton" destination="22D-xT-hdk" id="lRC-SA-zOe"/>
                         <outlet property="minSunButton" destination="lhE-hb-D9n" id="baK-tW-86e"/>
                         <outlet property="themeBinaryButton" destination="i9N-PO-4fJ" id="fl3-0M-sCW"/>
