@@ -1,0 +1,6 @@
+framework module Pods_The_Wizard_Clock_The_Wizard_ClockUITests {
+  umbrella header "Pods-The Wizard Clock-The Wizard ClockUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
