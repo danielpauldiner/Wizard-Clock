@@ -34,6 +34,23 @@ class SignInViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SignInAccount" {
+            let destinationVC = segue.destination as! ThemeSelectionViewController
+            let db = Firestore.firestore()
+            db.collection("users").whereField("uid", isEqualTo: Auth.auth().currentUser!.uid).getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        let data = document.data()
+                        destinationVC.userName = (data["name"]) as! String
+                    }
+                }
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

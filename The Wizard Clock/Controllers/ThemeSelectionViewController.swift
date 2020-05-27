@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ThemeSelectionViewController: UIViewController {
 
@@ -14,6 +15,7 @@ class ThemeSelectionViewController: UIViewController {
     var bgName = "Default"
     var hrName = "Trees"
     var minName = "Sun"
+    var userName: String?
     
     @IBOutlet weak var themeNatureButton: UIButton!
     @IBOutlet weak var themeJerseyButton: UIButton!
@@ -26,8 +28,18 @@ class ThemeSelectionViewController: UIViewController {
     @IBOutlet weak var minSunButton: UIButton!
     @IBOutlet weak var minBirdButton: UIButton!
     
+    // Hide/Show Top Navigation Bar
+    // Code Sourced from StackOverflow
+    // https://stackoverflow.com/questions/47150880/hide-navigation-bar-for-a-view-controller
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+            // Hide the Navigation Back Button
+            self.navigationItem.hidesBackButton = true
+        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: nil)
 
         // Do any additional setup after loading the view.
     }
@@ -38,6 +50,7 @@ class ThemeSelectionViewController: UIViewController {
         themeBinaryButton.isSelected = false
         sender.isSelected = true
         themeName = sender.currentTitle!
+        print(Auth.auth().currentUser?.email ?? "guest")
     }
     
     @IBAction func bgChanged(_ sender: UIButton) {
@@ -70,6 +83,14 @@ class ThemeSelectionViewController: UIViewController {
         }
     }
     
+    @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
     
     
     /*

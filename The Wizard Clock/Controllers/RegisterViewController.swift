@@ -11,6 +11,7 @@ import Firebase
 
 class RegisterViewController: UIViewController {
 
+    @IBOutlet weak var nameTextfield: UITextField!
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     
@@ -21,11 +22,13 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func registerPressed(_ sender: UIButton) {
-        if let email = emailTextfield.text, let password = passwordTextfield.text {
+        if let email = emailTextfield.text, let password = passwordTextfield.text, let name = nameTextfield.text {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let e = error {
                     print(e.localizedDescription)
                 } else {
+                    let db = Firestore.firestore()
+                    db.collection("users").addDocument(data: ["name":name, "uid": authResult!.user.uid])
                     //Navi to the ChatViewController
                     self.performSegue(withIdentifier: "RegisterAccount", sender: self)
                 }
