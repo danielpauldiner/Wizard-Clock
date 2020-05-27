@@ -16,6 +16,7 @@
 		03B265552458195C0033C2D9 /* ThemeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B265542458195C0033C2D9 /* ThemeSelectionViewController.swift */; };
 		03B26557245819920033C2D9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B26556245819920033C2D9 /* LoginViewController.swift */; };
 		03B26559245819B30033C2D9 /* ThemeResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B26558245819B30033C2D9 /* ThemeResultsViewController.swift */; };
+		03DCF063247E23E7000550AB /* HintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DCF062247E23E7000550AB /* HintViewController.swift */; };
 		653CD28E24551C0E009D3A66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653CD28D24551C0E009D3A66 /* AppDelegate.swift */; };
 		653CD29024551C0E009D3A66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653CD28F24551C0E009D3A66 /* SceneDelegate.swift */; };
 		653CD29224551C0E009D3A66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653CD29124551C0E009D3A66 /* ViewController.swift */; };
@@ -58,6 +59,7 @@
 		03B265542458195C0033C2D9 /* ThemeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionViewController.swift; sourceTree = "<group>"; };
 		03B26556245819920033C2D9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		03B26558245819B30033C2D9 /* ThemeResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeResultsViewController.swift; sourceTree = "<group>"; };
+		03DCF062247E23E7000550AB /* HintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintViewController.swift; sourceTree = "<group>"; };
 		16CC4FD1726293D95EE06F71 /* Pods_The_Wizard_ClockTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Wizard_ClockTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26929EA3E16A8964B58C2DC7 /* Pods-The Wizard ClockTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Wizard ClockTests.debug.xcconfig"; path = "Target Support Files/Pods-The Wizard ClockTests/Pods-The Wizard ClockTests.debug.xcconfig"; sourceTree = "<group>"; };
 		491B4514B3F731866CA43120 /* Pods-The Wizard ClockTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Wizard ClockTests.release.xcconfig"; path = "Target Support Files/Pods-The Wizard ClockTests/Pods-The Wizard ClockTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				03B26558245819B30033C2D9 /* ThemeResultsViewController.swift */,
 				03692F5B2473A69400E5697F /* RegisterViewController.swift */,
 				03692F5D2473A6F600E5697F /* SignInViewController.swift */,
+				03DCF062247E23E7000550AB /* HintViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				653CD28E24551C0E009D3A66 /* AppDelegate.swift in Sources */,
 				65CF1120245B53AB003666C2 /* NatureTheme.swift in Sources */,
 				03B265552458195C0033C2D9 /* ThemeSelectionViewController.swift in Sources */,
+				03DCF063247E23E7000550AB /* HintViewController.swift in Sources */,
 				65CF111E245B51CD003666C2 /* ClockTime.swift in Sources */,
 				03B26559245819B30033C2D9 /* ThemeResultsViewController.swift in Sources */,
 				65CF1122245CB9D4003666C2 /* BinaryTheme.swift in Sources */,
