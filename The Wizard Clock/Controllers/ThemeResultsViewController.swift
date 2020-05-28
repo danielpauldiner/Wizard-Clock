@@ -85,9 +85,12 @@ class ThemeResultsViewController: UIViewController {
     }
     
     @IBAction func tapPressed(_ sender: UITapGestureRecognizer) {
-        self.navigationController?.popViewController(animated: true)
+        self.performSegue(withIdentifier: "getHints", sender: self)
     }
     
+    @IBAction func swipeAction(_ sender: UISwipeGestureRecognizer) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     /*
     // MARK: - Navigation
