@@ -13,6 +13,7 @@ class BinaryTheme: Theme {
     override init(){
         super.init()
         self.name = "Binary"
+        self.hint = "The dots on the left show the tens and \nones of the hours in binary, while the \ndots on the right do the same for minutes"
     }
     
     override func getBgImage() -> String {

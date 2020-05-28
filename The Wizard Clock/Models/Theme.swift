@@ -10,9 +10,11 @@ import UIKit
 
 class Theme {
     var name: String
+    var hint: String
     
     init(){
         self.name = "Theme"
+        self.hint = "Pass a Theme Hint String to hintLabel.text\n to tell user how to tell time.\nString will differ based on current theme"
     }
 
     func getBgImage() -> String {

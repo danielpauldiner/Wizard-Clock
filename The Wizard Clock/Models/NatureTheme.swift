@@ -13,6 +13,7 @@ class NatureTheme: Theme {
     override init(){
         super.init()
         self.name = "Nature"
+        self.hint = "The trees represent hours and \nthe birds place in the sky the \nminutes"
     }
     
     override func getBgImage() -> String {

@@ -13,9 +13,11 @@ class HintViewController: UIViewController {
     @IBOutlet weak var hintLabel: UILabel!
     @IBOutlet weak var navLabel: UILabel!
     
+    var themeHint: String = "Pass a Theme Hint String to hintLabel.text\n to tell user how to tell time.\nString will differ based on current theme"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        hintLabel.text = "Pass a Theme Hint String to hintLabel.text\n to tell user how to tell time.\nString will differ based on current theme"
+        hintLabel.text = themeHint
         navLabel.text = "To navigate back to theme selection,\n swipe this card down.\n Then swipe left on screen."
 
         // Do any additional setup after loading the view.

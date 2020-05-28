@@ -92,7 +92,13 @@ class ThemeResultsViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "getHints" {
+            let theme = getTheme(themeName: themeName)
+            let destinationVC = segue.destination as! HintViewController
+            destinationVC.themeHint = theme.hint
+        }
+    }    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

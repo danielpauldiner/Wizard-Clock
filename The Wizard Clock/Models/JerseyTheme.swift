@@ -13,6 +13,7 @@ class JerseyTheme: Theme {
     override init(){
         super.init()
         self.name = "Jersey"
+        self.hint = "The jersey on the left is the hour \nand the jersey on the right are \nthe minutes"
     }
     
     override func getBgImage() -> String {
