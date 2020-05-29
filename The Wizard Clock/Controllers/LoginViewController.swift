@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
 
@@ -31,7 +32,14 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func continuePressed(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "goToThemeSelection", sender: self)
+        Auth.auth().signInAnonymously { (authResult, error) in
+            if let e = error {
+                print(e.localizedDescription)
+            } else {
+                //print("anonymous")
+                self.performSegue(withIdentifier: "goToThemeSelection", sender: self)
+            }
+        }
     }
     
 }

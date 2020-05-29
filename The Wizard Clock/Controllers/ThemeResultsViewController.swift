@@ -84,6 +84,11 @@ class ThemeResultsViewController: UIViewController {
         clockTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(drawClock), userInfo: nil, repeats: true)
     }
     
+    // Hides Status Bar to fully imerse the Wizard Clock experience when viewed
+    override var prefersStatusBarHidden: Bool {
+         return true
+    }
+    
     @IBAction func tapPressed(_ sender: UITapGestureRecognizer) {
         self.performSegue(withIdentifier: "getHints", sender: self)
     }
