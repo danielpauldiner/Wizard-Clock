@@ -11,10 +11,7 @@ import UIKit
 class ThemeSelectionViewController: UIViewController {
 
     var themeName = "Nature"
-    var greyscale = false
-    var bgName = "Default"
-    var hrName = "Trees"
-    var minName = "Sun"
+    var greyscale = "Off"
     
     @IBOutlet weak var themeNatureButton: UIButton!
     @IBOutlet weak var themeJerseyButton: UIButton!
@@ -25,9 +22,6 @@ class ThemeSelectionViewController: UIViewController {
 
     @IBOutlet weak var greyscaleYesButton: UIButton!
     @IBOutlet weak var greyscaleNobutton: UIButton!
-    
-    @IBOutlet weak var minSunButton: UIButton!
-    @IBOutlet weak var minBirdButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,29 +36,14 @@ class ThemeSelectionViewController: UIViewController {
         sender.isSelected = true
         themeName = sender.currentTitle!
     }
-    
-    @IBAction func bgChanged(_ sender: UIButton) {
-        bgDefaultButton.isSelected = false
-        sender.isSelected = true
-        bgName = sender.currentTitle!
-    }
+
     
     @IBAction func greyscaleChanged(_ sender: UIButton) {
         greyscaleYesButton.isSelected = false
         greyscaleNobutton.isSelected = false
         sender.isSelected = true
-        if sender == greyscaleYesButton{
-            greyscale = true
-        }else{
-            greyscale = false
-        }
-    }
-    
-    @IBAction func minChanged(_ sender: UIButton) {
-        minSunButton.isSelected = false
-        minBirdButton.isSelected = false
-        sender.isSelected = true
-        minName = sender.currentTitle!
+        greyscale = sender.currentTitle!
+        print(greyscale)
     }
     
     @IBAction func displayThemePressed(_ sender: UIButton) {

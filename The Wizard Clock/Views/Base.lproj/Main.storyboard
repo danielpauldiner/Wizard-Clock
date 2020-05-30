@@ -251,181 +251,130 @@
         <scene sceneID="3lW-8k-POH">
             <objects>
                 <viewController id="h8q-kc-utt" customClass="ThemeSelectionViewController" customModule="The_Wizard_Clock" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="j0q-LJ-Y6X">
+                    <view key="view" contentMode="scaleToFill" id="xLD-rr-hd1">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="cR1-Yg-J1c">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="7RA-Cj-vu8">
                                 <rect key="frame" x="0.0" y="50" width="1024" height="718"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgy-v8-Wdo" userLabel="Top View">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="237.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJC-tu-TW3">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="178"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2D9-Ag-J5n">
-                                                <rect key="frame" x="415" y="94.5" width="194.5" height="48"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Themes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNg-ce-NiG">
+                                                <rect key="frame" x="400" y="65" width="224.5" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="2D9-Ag-J5n" firstAttribute="centerX" secondItem="cgy-v8-Wdo" secondAttribute="centerX" id="rs1-ab-eGq"/>
-                                            <constraint firstItem="2D9-Ag-J5n" firstAttribute="centerY" secondItem="cgy-v8-Wdo" secondAttribute="centerY" id="vXL-o2-1Es"/>
+                                            <constraint firstItem="VNg-ce-NiG" firstAttribute="centerX" secondItem="rJC-tu-TW3" secondAttribute="centerX" id="aIQ-a7-ONS"/>
+                                            <constraint firstItem="VNg-ce-NiG" firstAttribute="centerY" secondItem="rJC-tu-TW3" secondAttribute="centerY" id="itQ-kX-c21"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWd-fB-VUU" userLabel="Middle View">
-                                        <rect key="frame" x="0.0" y="240.5" width="1024" height="237"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4nA-mR-4DT" userLabel="Nature">
+                                        <rect key="frame" x="0.0" y="180" width="1024" height="178"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="208" translatesAutoresizingMaskIntoConstraints="NO" id="agJ-ck-9RO">
-                                                <rect key="frame" x="8" y="-8" width="1024" height="237"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OyI-9H-9Wf">
+                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="88"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="Q4P-wB-XG8">
+                                                <rect key="frame" x="0.0" y="90" width="1024" height="88"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="feQ-UI-eM3" userLabel="Middle Left View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="408" height="237"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="yK6-gl-sou">
+                                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="88"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="Xi0-cq-X7r" userLabel="Theme Stack View">
-                                                                <rect key="frame" x="84.5" y="0.0" width="239" height="118.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eV4-m9-swL">
-                                                                        <rect key="frame" x="0.0" y="41" width="90.5" height="36"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1gk-Wn-5a1">
-                                                                        <rect key="frame" x="148.5" y="0.0" width="90.5" height="118.5"/>
-                                                                        <subviews>
-                                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlA-Kb-Yeq" userLabel="Theme Jersey Button">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="90.5" height="22.5"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                                <state key="normal" title="Jersey"/>
-                                                                                <connections>
-                                                                                    <action selector="themeChange:" destination="h8q-kc-utt" eventType="touchUpInside" id="RnV-Jc-qOd"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eP6-qt-cUK">
-                                                                                <rect key="frame" x="0.0" y="22.5" width="90.5" height="48"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                                <state key="normal" title="Nature"/>
-                                                                                <connections>
-                                                                                    <action selector="themeChange:" destination="h8q-kc-utt" eventType="touchUpInside" id="EBc-pn-ZUl"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9N-PO-4fJ" userLabel="Theme Binary Button">
-                                                                                <rect key="frame" x="0.0" y="70.5" width="90.5" height="48"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                                <state key="normal" title="Binary"/>
-                                                                                <connections>
-                                                                                    <action selector="themeChange:" destination="h8q-kc-utt" eventType="touchUpInside" id="eeb-3A-6C3"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                        </subviews>
-                                                                    </stackView>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IkK-uL-I0n" userLabel="Background Stack View">
-                                                                <rect key="frame" x="39" y="118.5" width="330" height="118.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fst-Lq-aST">
-                                                                        <rect key="frame" x="0.0" y="41.5" width="155" height="36"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dp6-Bm-gtN">
-                                                                        <rect key="frame" x="175" y="35.5" width="155" height="48"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                        <state key="normal" title="Default"/>
-                                                                        <connections>
-                                                                            <action selector="bgChanged:" destination="h8q-kc-utt" eventType="touchUpInside" id="3cp-XU-YDJ"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                </subviews>
-                                                            </stackView>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZXP-sV-2b3" userLabel="Middle Right View">
-                                                        <rect key="frame" x="616" y="0.0" width="408" height="237"/>
-                                                        <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MeA-M7-vML" userLabel="Hour Stack View">
-                                                                <rect key="frame" x="130.5" y="0.0" width="147" height="118.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zea-eC-Npg">
-                                                                        <rect key="frame" x="0.0" y="41" width="63.5" height="36"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGX-0h-OQN">
-                                                                        <rect key="frame" x="83.5" y="35" width="63.5" height="48"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                        <state key="normal" title="No"/>
-                                                                        <connections>
-                                                                            <action selector="greyscaleChanged:" destination="h8q-kc-utt" eventType="touchUpInside" id="5ad-kn-GOa"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Shl-ML-hzl" userLabel="Minute Stack View">
-                                                                <rect key="frame" x="50.5" y="118.5" width="307" height="118.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minute" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rj-99-UdF">
-                                                                        <rect key="frame" x="0.0" y="41.5" width="89" height="36"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhE-hb-D9n">
-                                                                        <rect key="frame" x="109" y="35.5" width="89" height="48"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                        <state key="normal" title="Sun"/>
-                                                                        <connections>
-                                                                            <action selector="minChanged:" destination="h8q-kc-utt" eventType="touchUpInside" id="vaE-bS-7p8"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22D-xT-hdk">
-                                                                        <rect key="frame" x="218" y="35.5" width="89" height="48"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                        <state key="normal" title="Bird"/>
-                                                                        <connections>
-                                                                            <action selector="minChanged:" destination="h8q-kc-utt" eventType="touchUpInside" id="xs4-ba-FIp"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                </subviews>
-                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMC-UZ-v3F">
+                                                                <rect key="frame" x="0.0" y="0.0" width="337.5" height="88"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <color key="tintColor" red="0.19215686269999999" green="0.1019607843" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal" title="Nature"/>
+                                                                <connections>
+                                                                    <action selector="themeChange:" destination="h8q-kc-utt" eventType="touchUpInside" id="4JN-NH-JJq"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugt-F2-1pq" userLabel="Jersey">
+                                                                <rect key="frame" x="343.5" y="0.0" width="337" height="88"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <color key="tintColor" red="0.19215686269999999" green="0.1019607843" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal" title="Jersey"/>
+                                                                <connections>
+                                                                    <action selector="themeChange:" destination="h8q-kc-utt" eventType="touchUpInside" id="whX-Qb-R7d"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1N-86-fvu" userLabel="Binary">
+                                                                <rect key="frame" x="686.5" y="0.0" width="337.5" height="88"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <color key="tintColor" red="0.19215686269999999" green="0.1019607843" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal" title="Binary"/>
+                                                                <connections>
+                                                                    <action selector="themeChange:" destination="h8q-kc-utt" eventType="touchUpInside" id="5Aa-oI-7BH"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="agJ-ck-9RO" secondAttribute="trailing" id="5BF-h1-1rt"/>
-                                            <constraint firstAttribute="bottom" secondItem="agJ-ck-9RO" secondAttribute="bottom" id="Jop-Vb-Mmh"/>
-                                            <constraint firstItem="agJ-ck-9RO" firstAttribute="leading" secondItem="bWd-fB-VUU" secondAttribute="leading" id="NPy-a7-wFs"/>
-                                            <constraint firstItem="agJ-ck-9RO" firstAttribute="top" secondItem="bWd-fB-VUU" secondAttribute="top" id="sig-pI-xDV"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqe-Ef-mEc" userLabel="Bottom View">
-                                        <rect key="frame" x="0.0" y="480.5" width="1024" height="237.5"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="GRZ-n3-XHg">
+                                        <rect key="frame" x="0.0" y="360" width="1024" height="178"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiw-ZQ-jD2">
-                                                <rect key="frame" x="372" y="89" width="280" height="60"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="SZi-ln-y6I"/>
-                                                    <constraint firstAttribute="height" constant="60" id="nYf-Qd-ILc"/>
-                                                </constraints>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greyscale Theme:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7R-3p-L0N">
+                                                <rect key="frame" x="395.5" y="0.0" width="233.5" height="88"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="hyY-Mr-hG1">
+                                                <rect key="frame" x="444.5" y="90" width="135" height="88"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyE-w9-eLP" userLabel="false">
+                                                        <rect key="frame" x="0.0" y="20" width="42" height="48"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <color key="tintColor" red="0.19215686269999999" green="0.1019607843" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Off"/>
+                                                        <connections>
+                                                            <action selector="greyscaleChanged:" destination="h8q-kc-utt" eventType="touchUpInside" id="sMu-YE-7io"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAK-AT-b1v" userLabel="true">
+                                                        <rect key="frame" x="93" y="20" width="42" height="48"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <color key="tintColor" red="0.19215686269999999" green="0.1019607843" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="On"/>
+                                                        <connections>
+                                                            <action selector="greyscaleChanged:" destination="h8q-kc-utt" eventType="touchUpInside" id="uJc-5p-crA"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q2t-Kk-iEL">
+                                        <rect key="frame" x="0.0" y="540" width="1024" height="178"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ET5-Ap-Nwp">
+                                                <rect key="frame" x="405" y="59" width="214" height="60"/>
+                                                <color key="backgroundColor" red="0.19215686269999999" green="0.1019607843" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="Build Theme"/>
+                                                <state key="normal" title="Build Theme">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
-                                                    <action selector="displayThemePressed:" destination="h8q-kc-utt" eventType="touchUpInside" id="7ey-Ht-Qtp"/>
+                                                    <action selector="displayThemePressed:" destination="h8q-kc-utt" eventType="touchUpInside" id="5yM-EL-gIn"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="jiw-ZQ-jD2" firstAttribute="centerX" secondItem="gqe-Ef-mEc" secondAttribute="centerX" id="D37-Ie-MhN"/>
-                                            <constraint firstItem="jiw-ZQ-jD2" firstAttribute="centerY" secondItem="gqe-Ef-mEc" secondAttribute="centerY" id="iEf-VH-S8b"/>
+                                            <constraint firstItem="ET5-Ap-Nwp" firstAttribute="centerX" secondItem="Q2t-Kk-iEL" secondAttribute="centerX" id="O6C-Uk-fzm"/>
+                                            <constraint firstItem="ET5-Ap-Nwp" firstAttribute="centerY" secondItem="Q2t-Kk-iEL" secondAttribute="centerY" id="Vnq-Bz-TGj"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -433,21 +382,20 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Xfu-oI-nHp" firstAttribute="trailing" secondItem="cR1-Yg-J1c" secondAttribute="trailing" id="ETY-Z1-JAT"/>
-                            <constraint firstItem="cR1-Yg-J1c" firstAttribute="leading" secondItem="Xfu-oI-nHp" secondAttribute="leading" id="iho-Bh-fz9"/>
-                            <constraint firstItem="cR1-Yg-J1c" firstAttribute="top" secondItem="Xfu-oI-nHp" secondAttribute="top" id="joV-vt-msb"/>
-                            <constraint firstItem="Xfu-oI-nHp" firstAttribute="bottom" secondItem="cR1-Yg-J1c" secondAttribute="bottom" id="kyG-Ym-lL9"/>
+                            <constraint firstItem="7RA-Cj-vu8" firstAttribute="leading" secondItem="5uI-eo-xGE" secondAttribute="leading" id="S8X-nd-l0H"/>
+                            <constraint firstItem="7RA-Cj-vu8" firstAttribute="top" secondItem="5uI-eo-xGE" secondAttribute="top" id="aRT-AJ-jWf"/>
+                            <constraint firstItem="5uI-eo-xGE" firstAttribute="trailing" secondItem="7RA-Cj-vu8" secondAttribute="trailing" id="adE-3L-aVO"/>
+                            <constraint firstItem="5uI-eo-xGE" firstAttribute="bottom" secondItem="7RA-Cj-vu8" secondAttribute="bottom" id="gOi-MS-3su"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Xfu-oI-nHp"/>
+                        <viewLayoutGuide key="safeArea" id="5uI-eo-xGE"/>
                     </view>
                     <navigationItem key="navigationItem" id="j3U-2q-8KF"/>
                     <connections>
-                        <outlet property="bgDefaultButton" destination="dp6-Bm-gtN" id="23f-bH-4Cv"/>
-                        <outlet property="minBirdButton" destination="22D-xT-hdk" id="lRC-SA-zOe"/>
-                        <outlet property="minSunButton" destination="lhE-hb-D9n" id="baK-tW-86e"/>
-                        <outlet property="themeBinaryButton" destination="i9N-PO-4fJ" id="fl3-0M-sCW"/>
-                        <outlet property="themeJerseyButton" destination="wlA-Kb-Yeq" id="UkQ-8b-fVi"/>
-                        <outlet property="themeNatureButton" destination="eP6-qt-cUK" id="W2F-Sl-Hw4"/>
+                        <outlet property="greyscaleNobutton" destination="tyE-w9-eLP" id="U38-u6-KO1"/>
+                        <outlet property="greyscaleYesButton" destination="wAK-AT-b1v" id="YN5-9G-3Zq"/>
+                        <outlet property="themeBinaryButton" destination="y1N-86-fvu" id="URy-p6-suB"/>
+                        <outlet property="themeJerseyButton" destination="Ugt-F2-1pq" id="qdl-D4-ykA"/>
+                        <outlet property="themeNatureButton" destination="AMC-UZ-v3F" id="zJB-t4-1DA"/>
                         <segue destination="Xuu-8c-ad0" kind="show" identifier="goToResults" id="ImX-fs-qz7"/>
                     </connections>
                 </viewController>
@@ -661,7 +609,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ekg-Nt-ysY"/>
+        <segue reference="9Mp-0X-A9J"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="144" width="144" height="144"/>
