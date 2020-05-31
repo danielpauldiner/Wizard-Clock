@@ -7,20 +7,23 @@
 //
 
 import UIKit
+import CoreImage
 
 class ThemeResultsViewController: UIViewController {
 
     var themeName: String = "Nature"
     var clockTimer: Timer?
     var greyscale: String = "Off"
+    let context = CIContext()
+    let filter = CIFilter(name: "CIPhotoEffectNoir")
     
     func drawImage(imageName: String, position: CGRect){
         var image = UIImage(named: imageName)
+        let originalCIImage = CIImage(image: image!)
         if greyscale == "On"{
-            let originalCIImage = CIImage(image: image!)
-            let filter = CIFilter(name: "CIPhotoEffectNoir")
             filter?.setValue(originalCIImage, forKey: kCIInputImageKey)
-            image = UIImage(ciImage: (filter?.outputImage)!)
+            let cgImage = context.createCGImage((filter?.outputImage!)!, from: (filter?.outputImage!.extent)!)
+            image = UIImage(cgImage: cgImage!)
         }
         let imageView = UIImageView(image: image!)
         imageView.frame = position
@@ -78,7 +81,7 @@ class ThemeResultsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         drawClock()
         
         clockTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(drawClock), userInfo: nil, repeats: true)
