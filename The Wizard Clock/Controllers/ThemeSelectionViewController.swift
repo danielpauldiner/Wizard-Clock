@@ -8,35 +8,25 @@
 
 import UIKit
 
-class ThemeSelectionViewController: UIViewController {
+class ThemeSelectionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     var themeName = "Nature"
     var greyscale = "Off"
+    let themes = ["Nature", "Jersey", "Binary"]
+    let cellReuseIdentifier = "cell"
     
-    @IBOutlet weak var themeNatureButton: UIButton!
-    @IBOutlet weak var themeJerseyButton: UIButton!
-    @IBOutlet weak var themeBinaryButton: UIButton!
+    @IBOutlet weak var ThemeSelectionTable: UITableView!
     
-    @IBOutlet weak var bgDefaultButton: UIButton!
-    
-
     @IBOutlet weak var greyscaleYesButton: UIButton!
     @IBOutlet weak var greyscaleNobutton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.ThemeSelectionTable.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        ThemeSelectionTable.delegate = self
+        ThemeSelectionTable.dataSource = self
     }
-    
-    @IBAction func themeChange(_ sender: UIButton) {
-        themeNatureButton.isSelected = false
-        themeJerseyButton.isSelected = false
-        themeBinaryButton.isSelected = false
-        sender.isSelected = true
-        themeName = sender.currentTitle!
-    }
-
     
     @IBAction func greyscaleChanged(_ sender: UIButton) {
         greyscaleYesButton.isSelected = false
@@ -58,8 +48,21 @@ class ThemeSelectionViewController: UIViewController {
         }
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.themes.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:UITableViewCell = (self.ThemeSelectionTable.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell?)!
+
+        cell.textLabel?.text = self.themes[indexPath.row]
+        cell.textLabel?.textAlignment = .center
+        return cell
+    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        themeName = self.themes[indexPath.row]
+    }
     /*
     // MARK: - Navigation
 

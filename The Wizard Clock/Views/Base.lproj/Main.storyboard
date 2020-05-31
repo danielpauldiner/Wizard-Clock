@@ -274,54 +274,10 @@
                                             <constraint firstItem="VNg-ce-NiG" firstAttribute="centerY" secondItem="rJC-tu-TW3" secondAttribute="centerY" id="itQ-kX-c21"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4nA-mR-4DT" userLabel="Nature">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K2j-33-hbN">
                                         <rect key="frame" x="0.0" y="180" width="1024" height="178"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OyI-9H-9Wf">
-                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="88"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="Q4P-wB-XG8">
-                                                <rect key="frame" x="0.0" y="90" width="1024" height="88"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="yK6-gl-sou">
-                                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="88"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMC-UZ-v3F">
-                                                                <rect key="frame" x="0.0" y="0.0" width="337.5" height="88"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                <color key="tintColor" red="0.19215686269999999" green="0.1019607843" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <state key="normal" title="Nature"/>
-                                                                <connections>
-                                                                    <action selector="themeChange:" destination="h8q-kc-utt" eventType="touchUpInside" id="4JN-NH-JJq"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugt-F2-1pq" userLabel="Jersey">
-                                                                <rect key="frame" x="343.5" y="0.0" width="337" height="88"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                <color key="tintColor" red="0.19215686269999999" green="0.1019607843" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <state key="normal" title="Jersey"/>
-                                                                <connections>
-                                                                    <action selector="themeChange:" destination="h8q-kc-utt" eventType="touchUpInside" id="whX-Qb-R7d"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1N-86-fvu" userLabel="Binary">
-                                                                <rect key="frame" x="686.5" y="0.0" width="337.5" height="88"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                <color key="tintColor" red="0.19215686269999999" green="0.1019607843" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <state key="normal" title="Binary"/>
-                                                                <connections>
-                                                                    <action selector="themeChange:" destination="h8q-kc-utt" eventType="touchUpInside" id="5Aa-oI-7BH"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </tableView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="GRZ-n3-XHg">
                                         <rect key="frame" x="0.0" y="360" width="1024" height="178"/>
                                         <subviews>
@@ -391,11 +347,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="j3U-2q-8KF"/>
                     <connections>
+                        <outlet property="ThemeSelectionTable" destination="K2j-33-hbN" id="kDS-ma-VR9"/>
                         <outlet property="greyscaleNobutton" destination="tyE-w9-eLP" id="U38-u6-KO1"/>
                         <outlet property="greyscaleYesButton" destination="wAK-AT-b1v" id="YN5-9G-3Zq"/>
-                        <outlet property="themeBinaryButton" destination="y1N-86-fvu" id="URy-p6-suB"/>
-                        <outlet property="themeJerseyButton" destination="Ugt-F2-1pq" id="qdl-D4-ykA"/>
-                        <outlet property="themeNatureButton" destination="AMC-UZ-v3F" id="zJB-t4-1DA"/>
                         <segue destination="Xuu-8c-ad0" kind="show" identifier="goToResults" id="ImX-fs-qz7"/>
                     </connections>
                 </viewController>
@@ -609,7 +563,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9Mp-0X-A9J"/>
+        <segue reference="ekg-Nt-ysY"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="144" width="144" height="144"/>
