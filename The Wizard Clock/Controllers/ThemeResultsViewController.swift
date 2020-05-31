@@ -12,11 +12,11 @@ class ThemeResultsViewController: UIViewController {
 
     var themeName: String = "Nature"
     var clockTimer: Timer?
-    var greyscale: Bool = false
+    var greyscale: String = "Off"
     
     func drawImage(imageName: String, position: CGRect){
         var image = UIImage(named: imageName)
-        if greyscale{
+        if greyscale == "On"{
             let originalCIImage = CIImage(image: image!)
             let filter = CIFilter(name: "CIPhotoEffectNoir")
             filter?.setValue(originalCIImage, forKey: kCIInputImageKey)
@@ -82,6 +82,11 @@ class ThemeResultsViewController: UIViewController {
         drawClock()
         
         clockTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(drawClock), userInfo: nil, repeats: true)
+    }
+    
+    // Hides Status Bar to fully imerse the Wizard Clock experience when viewed
+    override var prefersStatusBarHidden: Bool {
+         return true
     }
     
     @IBAction func tapPressed(_ sender: UITapGestureRecognizer) {
