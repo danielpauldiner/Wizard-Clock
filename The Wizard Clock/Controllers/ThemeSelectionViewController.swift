@@ -11,19 +11,23 @@ import Firebase
 
 class ThemeSelectionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
+    var displayName: String = ""
     var themeName = "Nature"
     var greyscale = "Off"
+    let currentUser = Auth.auth().currentUser!
+    let db = Firestore.firestore()
     let themes = ["Nature", "Jersey", "Binary"]
     let cellReuseIdentifier = "cell"
     
+    @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var ThemeSelectionTable: UITableView!
-    
     @IBOutlet weak var greyscaleYesButton: UIButton!
     @IBOutlet weak var greyscaleNobutton: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(true)
         // Hide the Navigation Back Button
+        setDisplayName()
         self.navigationItem.hidesBackButton = true
         self.navigationItem.title = "Wizard Clock"
     }
@@ -41,7 +45,7 @@ class ThemeSelectionViewController: UIViewController, UITableViewDelegate, UITab
         greyscaleNobutton.isSelected = false
         sender.isSelected = true
         greyscale = sender.currentTitle!
-        print(greyscale)
+        print(displayName)
     }
     
     @IBAction func displayThemePressed(_ sender: UIButton) {
@@ -82,5 +86,22 @@ class ThemeSelectionViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
     
-
+    func setDisplayName() {
+        if currentUser.email != nil {
+            db.collection("users").whereField("uid", isEqualTo: currentUser.uid).getDocuments { (QuerySnapshot, error) in
+                if let e = error {
+                    print(e.localizedDescription)
+                } else {
+                    for doc in QuerySnapshot!.documents {
+                        let data = doc.data()
+                        self.displayName = data["name"] as! String
+                        self.headerLabel.text = "\(self.displayName)\'s Themes"
+                    }
+                }
+            }
+        } else {
+            self.displayName = "Guest"
+            headerLabel.text = "\(displayName)\'s Themes"
+        }
+    }
 }
