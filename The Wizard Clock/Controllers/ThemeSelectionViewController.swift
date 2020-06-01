@@ -45,7 +45,6 @@ class ThemeSelectionViewController: UIViewController, UITableViewDelegate, UITab
         greyscaleNobutton.isSelected = false
         sender.isSelected = true
         greyscale = sender.currentTitle!
-        print(displayName)
     }
     
     @IBAction func displayThemePressed(_ sender: UIButton) {
@@ -101,7 +100,7 @@ class ThemeSelectionViewController: UIViewController, UITableViewDelegate, UITab
             }
         } else {
             self.displayName = "Guest"
-            headerLabel.text = "\(displayName)\'s Themes"
+            headerLabel.text = "\(self.displayName)\'s Themes"
         }
     }
 }
