@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bck-qa-OgQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bck-qa-OgQ">
     <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -345,7 +345,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5uI-eo-xGE"/>
                     </view>
-                    <navigationItem key="navigationItem" id="j3U-2q-8KF"/>
+                    <navigationItem key="navigationItem" id="j3U-2q-8KF">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="5gp-Oy-qiz">
+                            <connections>
+                                <action selector="logoutPressed:" destination="h8q-kc-utt" id="4ZQ-v4-w8T"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ThemeSelectionTable" destination="K2j-33-hbN" id="kDS-ma-VR9"/>
                         <outlet property="greyscaleNobutton" destination="tyE-w9-eLP" id="U38-u6-KO1"/>

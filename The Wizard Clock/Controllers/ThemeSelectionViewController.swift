@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ThemeSelectionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
@@ -19,6 +20,13 @@ class ThemeSelectionViewController: UIViewController, UITableViewDelegate, UITab
     
     @IBOutlet weak var greyscaleYesButton: UIButton!
     @IBOutlet weak var greyscaleNobutton: UIButton!
+    
+    override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(true)
+        // Hide the Navigation Back Button
+        self.navigationItem.hidesBackButton = true
+        self.navigationItem.title = "Wizard Clock"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,14 +71,16 @@ class ThemeSelectionViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         themeName = self.themes[indexPath.row]
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
     }
-    */
+    
 
 }
