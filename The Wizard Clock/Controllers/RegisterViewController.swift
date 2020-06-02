@@ -24,8 +24,6 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Register"
         errorLabel.alpha = 0
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func registerPressed(_ sender: UIButton) {
