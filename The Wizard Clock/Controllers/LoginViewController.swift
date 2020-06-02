@@ -42,8 +42,6 @@ class LoginViewController: UIViewController {
         Auth.auth().signInAnonymously { (authResult, error) in
             if let e = error {
                 print(e.localizedDescription)
-            } else {
-                self.performSegue(withIdentifier: "goToThemeSelection", sender: self)
             }
         }
     }
