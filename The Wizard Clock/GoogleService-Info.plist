@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1085531468580-v072qgtesc652q6jihsftcjp2eb2kt4c.apps.googleusercontent.com</string>
+	<string>645155569033-9tje5lstdoas491q6tbrreersl0o889u.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1085531468580-v072qgtesc652q6jihsftcjp2eb2kt4c</string>
+	<string>com.googleusercontent.apps.645155569033-9tje5lstdoas491q6tbrreersl0o889u</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCIE6OVcS9Z5CIzZ7u6cJDYnAmtsh3JSMU</string>
+	<string>AIzaSyDe-Bw55TtRBl9fwouRMiY5NXK1Xtu-1JE</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1085531468580</string>
+	<string>645155569033</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>edu.oregonstate.wizard-clock</string>
 	<key>PROJECT_ID</key>
-	<string>wizardclock---no-analytics</string>
+	<string>wizard-clock-osu</string>
 	<key>STORAGE_BUCKET</key>
-	<string>wizardclock---no-analytics.appspot.com</string>
+	<string>wizard-clock-osu.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1085531468580:ios:aea20dbc47b9ffb94fb9b1</string>
+	<string>1:645155569033:ios:2d85b3a67be06d62c3b558</string>
 	<key>DATABASE_URL</key>
-	<string>https://wizardclock---no-analytics.firebaseio.com</string>
+	<string>https://wizard-clock-osu.firebaseio.com</string>
 </dict>
 </plist>
