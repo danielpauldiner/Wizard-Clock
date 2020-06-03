@@ -10,6 +10,7 @@ import UIKit
 
 struct ClockTime {
     
+    // Returns the current hour of the day.
     func getHour() -> Int {
         let date = Date()
         let calendar = Calendar.current
@@ -20,6 +21,7 @@ struct ClockTime {
         return hour
     }
     
+    // Returns the current minute in the hour.
     func getMinute() -> Int {
         let date = Date()
         let calendar = Calendar.current

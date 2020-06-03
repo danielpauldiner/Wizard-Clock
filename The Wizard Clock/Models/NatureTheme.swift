@@ -10,16 +10,19 @@ import UIKit
 
 class NatureTheme: Theme {
     
+    // Initialization function for Theme class. Puts in default values for name and hint
     override init(){
         super.init()
         self.name = "Nature"
         self.hint = "The trees represent hours and \nthe birds place in the sky the \nminutes"
     }
     
+    // Returns the name of the background image for the theme.
     override func getBgImage() -> String {
         return "Nature_Background"
     }
-    
+        
+    // Returns the name of the hour image for the theme.
     override func getHrImage(hour: Int) -> String {
         var hourImage: String
         switch hour{
@@ -52,20 +55,24 @@ class NatureTheme: Theme {
         }
         return hourImage
     }
-    
+        
+    // Returns the name of the minute image for the theme.
     override func getMinImage(minute: Int) -> String {
         return "Nature_Bird"
     }
         
+    // Returns a CGRect which represents the location and size of the background image.
     override func getBGPosition() -> CGRect {
         return UIScreen.main.bounds
     }
-
+    
+    // Returns a CGRect which represents the location and size of the hour image.
     override func getHrPosition(hour: Int) -> CGRect{
         let screenSize = UIScreen.main.bounds
         return CGRect(x: 0, y: Int(0.66*screenSize.height), width: Int(screenSize.width) , height: Int(0.33*screenSize.height))
     }
-    
+            
+    // Returns a CGRect which represents the location and size of the minute image.
     override func getMinPosition(minute: Int) -> CGRect{
         let imageHeight = 20
         let imageWidth = 50

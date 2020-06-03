@@ -10,16 +10,19 @@ import UIKit
 
 class BinaryTheme: Theme {
     
+    // Initialization function for Theme class. Puts in default values for name and hint.
     override init(){
         super.init()
         self.name = "Binary"
         self.hint = "The dots on the left show the tens and \nones of the hours in binary, while the \ndots on the right do the same for minutes"
     }
     
+    // Returns the name of the background image for the theme.
     override func getBgImage() -> String {
         return "Binary_Background"
     }
-    
+        
+    // Returns the name of the hour image for the theme.
     override func getHrImage(hour: Int) -> String {
         var hourImage: String
         switch hour{
@@ -53,6 +56,7 @@ class BinaryTheme: Theme {
         return hourImage
     }
         
+    // Returns the name of the minute image for the theme.
     override func getMinImage(minute: Int) -> String {
         var minuteImage: String
         switch minute{
@@ -182,15 +186,18 @@ class BinaryTheme: Theme {
         return minuteImage
     }
             
+    // Returns a CGRect which represents the location and size of the background image.
     override func getBGPosition() -> CGRect {
         return UIScreen.main.bounds
     }
-
+    
+    // Returns a CGRect which represents the location and size of the hour image.
     override func getHrPosition(hour: Int) -> CGRect{
         let screenSize = UIScreen.main.bounds
         return CGRect(x: Int(0.25*screenSize.width), y: Int(0.2*screenSize.height),  width:Int(0.25*screenSize.width) , height: Int(0.6*screenSize.height))
     }
-        
+            
+    // Returns a CGRect which represents the location and size of the minute image.
     override func getMinPosition(minute: Int) -> CGRect{
         let screenSize = UIScreen.main.bounds
         return CGRect(x: Int(0.5*screenSize.width), y: Int(0.2*screenSize.height), width: Int(0.25*screenSize.width) , height: Int(0.6*screenSize.height))
