@@ -7,26 +7,36 @@
 //
 
 import UIKit
+import CoreImage
 
 class ThemeResultsViewController: UIViewController {
 
+    // The theme which is being displayed. Overwritten by input from theme selection page
     var themeName: String = "Nature"
     var clockTimer: Timer?
+    // Determines if the greyscale effect is active. Overwritten by input from theme selection page.
     var greyscale: String = "Off"
+    // Context which the filtering for the greyscale option occurs in.
+    let context = CIContext()
+    // The filter being used for the greyscale effect
+    let filter = CIFilter(name: "CIPhotoEffectNoir")
     
+    // Takes in the name of an image and the position for the image and draws it to the screen.
     func drawImage(imageName: String, position: CGRect){
         var image = UIImage(named: imageName)
+        let originalCIImage = CIImage(image: image!)
+        // When the greyscale button is selected the noir filter is applied to the images
         if greyscale == "On"{
-            let originalCIImage = CIImage(image: image!)
-            let filter = CIFilter(name: "CIPhotoEffectNoir")
             filter?.setValue(originalCIImage, forKey: kCIInputImageKey)
-            image = UIImage(ciImage: (filter?.outputImage)!)
+            let cgImage = context.createCGImage((filter?.outputImage!)!, from: (filter?.outputImage!.extent)!)
+            image = UIImage(cgImage: cgImage!)
         }
         let imageView = UIImageView(image: image!)
         imageView.frame = position
         view.addSubview(imageView)
     }
     
+    // Gets the theme based on the selection from the theme selection page.
     func getTheme(themeName: String) -> Theme{
         var theme: Theme
         switch themeName{
@@ -42,6 +52,7 @@ class ThemeResultsViewController: UIViewController {
         return theme
     }
     
+    // Draws the clock based on the time and the theme selected.
     @objc func drawClock(){
         let theme = getTheme(themeName: themeName)
         
@@ -78,9 +89,9 @@ class ThemeResultsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         drawClock()
-        
+        // Redraws the clock timer every 5 seconds so that it is up to date
         clockTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(drawClock), userInfo: nil, repeats: true)
     }
     
@@ -89,28 +100,23 @@ class ThemeResultsViewController: UIViewController {
          return true
     }
     
+    // Brings up the hints page when the screen is double tapped
     @IBAction func tapPressed(_ sender: UITapGestureRecognizer) {
         self.performSegue(withIdentifier: "getHints", sender: self)
     }
     
+    // Returns to the theme selection page when a swipe left gesture is made
     @IBAction func swipeAction(_ sender: UISwipeGestureRecognizer) {
         self.navigationController?.popViewController(animated: true)
     }
     
+    // Sends the hint appropriate to the theme to the hints page on seque.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "getHints" {
             let theme = getTheme(themeName: themeName)
             let destinationVC = segue.destination as! HintViewController
             destinationVC.themeHint = theme.hint
         }
-    }    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
 
 }

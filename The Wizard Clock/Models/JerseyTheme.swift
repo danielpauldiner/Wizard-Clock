@@ -10,16 +10,19 @@ import UIKit
 
 class JerseyTheme: Theme {
     
+    // Initialization function for Theme class. Puts in default values for name and hint.
     override init(){
         super.init()
         self.name = "Jersey"
         self.hint = "The jersey on the left is the hour \nand the jersey on the right are \nthe minutes"
     }
     
+    // Returns the name of the background image for the theme.
     override func getBgImage() -> String {
         return "Jersey_Background"
     }
-    
+        
+    // Returns the name of the hour image for the theme.
     override func getHrImage(hour: Int) -> String {
         var hourImage: String
         switch hour{
@@ -52,7 +55,8 @@ class JerseyTheme: Theme {
         }
         return hourImage
     }
-    
+        
+    // Returns the name of the minute image for the theme.
     override func getMinImage(minute: Int) -> String {
         var minuteImage: String
         switch minute{
@@ -182,15 +186,18 @@ class JerseyTheme: Theme {
         return minuteImage
     }
         
+    // Returns a CGRect which represents the location and size of the background image.
     override func getBGPosition() -> CGRect {
         return UIScreen.main.bounds
     }
-
+    
+    // Returns a CGRect which represents the location and size of the hour image.
     override func getHrPosition(hour: Int) -> CGRect{
         let screenSize = UIScreen.main.bounds
         return CGRect(x: Int(0.19*screenSize.width), y: Int(0.21*screenSize.height), width: Int(0.15*screenSize.width) , height: Int(0.215*screenSize.height))
     }
-    
+            
+    // Returns a CGRect which represents the location and size of the minute image.
     override func getMinPosition(minute: Int) -> CGRect{
         let screenSize = UIScreen.main.bounds
         return CGRect(x: Int(0.69*screenSize.width), y: Int(0.21*screenSize.height), width: Int(0.15*screenSize.width) , height: Int(0.215*screenSize.height))
