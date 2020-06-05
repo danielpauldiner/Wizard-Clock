@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03692F5A24738E8500E5697F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03692F5924738E8500E5697F /* GoogleService-Info.plist */; };
+		0316B1772485E56D00FEBC54 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0316B1762485E56D00FEBC54 /* GoogleService-Info.plist */; };
 		03692F5C2473A69400E5697F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03692F5B2473A69400E5697F /* RegisterViewController.swift */; };
 		03692F5E2473A6F600E5697F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03692F5D2473A6F600E5697F /* SignInViewController.swift */; };
 		038E8D922473436700002085 /* The Wizard ClockTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 653CD2A024551C22009D3A66 /* The Wizard ClockTests.xctest */; };
@@ -52,7 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03692F5924738E8500E5697F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0316B1762485E56D00FEBC54 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		03692F5B2473A69400E5697F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		03692F5D2473A6F600E5697F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		03B2654E24580D7A0033C2D9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 				653CD29624551C21009D3A66 /* Assets.xcassets */,
 				653CD29824551C21009D3A66 /* LaunchScreen.storyboard */,
 				653CD29B24551C21009D3A66 /* Info.plist */,
-				03692F5924738E8500E5697F /* GoogleService-Info.plist */,
+				0316B1762485E56D00FEBC54 /* GoogleService-Info.plist */,
 			);
 			path = "The Wizard Clock";
 			sourceTree = "<group>";
@@ -340,7 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				653CD2BD2455C327009D3A66 /* Main.storyboard in Resources */,
-				03692F5A24738E8500E5697F /* GoogleService-Info.plist in Resources */,
+				0316B1772485E56D00FEBC54 /* GoogleService-Info.plist in Resources */,
 				653CD29A24551C21009D3A66 /* LaunchScreen.storyboard in Resources */,
 				653CD29724551C21009D3A66 /* Assets.xcassets in Resources */,
 			);

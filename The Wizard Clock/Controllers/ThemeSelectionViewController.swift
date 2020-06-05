@@ -7,18 +7,27 @@
 //
 
 import UIKit
+import Firebase
 
 class ThemeSelectionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
+    // Init var for display name based on user's login
+    var displayName: String = ""
     // Name of the theme to be displayed. Sent to the theme results view
     var themeName = "Nature"
     // Boolean which determines if the theme should be drawn in greyscale. Sent to the theme results view
     var greyscale = "Off"
+    // Variable to shorten call for Auth's current user
+    let currentUser = Auth.auth().currentUser!
+    // Variable to shorten call for Firestore
+    let db = Firestore.firestore()
     // List of all possible themes which populate the theme table
     let themes = ["Nature", "Jersey", "Binary"]
     // Name of identifier for cells which is used in making the theme table
     let cellReuseIdentifier = "cell"
     
+    // Header label as a variable from UIBuilder in storyboard
+    @IBOutlet weak var headerLabel: UILabel!
     // Connects to the table for selecting themes in the storyboard
     @IBOutlet weak var ThemeSelectionTable: UITableView!
     
@@ -26,6 +35,16 @@ class ThemeSelectionViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var greyscaleYesButton: UIButton!
     @IBOutlet weak var greyscaleNobutton: UIButton!
     
+    // Function called before view/screen appears
+    override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(true)
+        // Hide the Navigation Back Button
+        setDisplayName()
+        self.navigationItem.hidesBackButton = true
+        self.navigationItem.title = "Wizard Clock"
+    }
+    
+    // Function called when view/screen appears
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -52,7 +71,6 @@ class ThemeSelectionViewController: UIViewController, UITableViewDelegate, UITab
         greyscaleNobutton.isSelected = false
         sender.isSelected = true
         greyscale = sender.currentTitle!
-        print(greyscale)
     }
     
     // Performs seque for going to the theme results page
@@ -86,6 +104,42 @@ class ThemeSelectionViewController: UIViewController, UITableViewDelegate, UITab
     // Sets the themeName parameter based on the table selection
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         themeName = self.themes[indexPath.row]
+    }
+    
+    
+    // Function logs out Auth's current user, both anonymous and registered email
+    // linked with navbar's logout button
+    @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+        } catch let signOutError as NSError {
+            // print to console if any error in loggin out Auth's current user
+            print ("Error signing out: %@", signOutError)
+        }
+    }
+    
+    // Function call's current user's ref id and pulls stored name and is passed to headerLabel
+    func setDisplayName() {
+        // If Auth's current user is a registered user, get name
+        if currentUser.email != nil {
+            db.collection("users").whereField("uid", isEqualTo: currentUser.uid).getDocuments { (QuerySnapshot, error) in
+                if let e = error {
+                    // print error to console if failed
+                    print(e.localizedDescription)
+                } else {
+                    for doc in QuerySnapshot!.documents {
+                        let data = doc.data()
+                        self.displayName = data["name"] as! String
+                        self.headerLabel.text = "\(self.displayName)\'s Themes"
+                    }
+                }
+            }
+        } else {
+            // If Auth's current user is anonymous, set name to Guest
+            self.displayName = "Guest"
+            headerLabel.text = "\(self.displayName)\'s Themes"
+        }
     }
 
 }
