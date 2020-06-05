@@ -187,7 +187,7 @@
                                             <constraint firstAttribute="height" constant="60" id="xfl-my-K0J"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="one-time-code"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozf-if-EPZ">
                                         <rect key="frame" x="0.0" y="415" width="944" height="60"/>
@@ -216,12 +216,16 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.19215686269999999" green="0.1019607843" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="V6p-vS-bje" firstAttribute="trailing" secondItem="k8I-vQ-Rpc" secondAttribute="trailing" constant="40" id="T7O-Ro-2Ej"/>
                             <constraint firstItem="k8I-vQ-Rpc" firstAttribute="top" secondItem="V6p-vS-bje" secondAttribute="top" constant="10" id="ssF-vE-Er7"/>
                             <constraint firstItem="k8I-vQ-Rpc" firstAttribute="leading" secondItem="V6p-vS-bje" secondAttribute="leading" constant="40" id="ww4-i1-rmA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V6p-vS-bje"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="WId-ot-4C7" appends="YES" id="Xw5-Bh-zBm"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="T4g-hu-3fn"/>
                     <connections>
@@ -233,6 +237,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9tf-8S-OcQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="WId-ot-4C7">
+                    <connections>
+                        <action selector="tapPressed:" destination="nGy-lf-kRb" id="aUZ-y6-IaA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1184" y="2381"/>
         </scene>
@@ -540,7 +549,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LH6-XU-ceA"/>
+        <segue reference="9Mp-0X-A9J"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="144" width="144" height="144"/>

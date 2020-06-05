@@ -72,7 +72,8 @@ class ThemeResultsViewController: UIViewController {
         
     }
     
-    // Hide/Show Top Navigation Bar
+    // Function called right before view/screen is shown
+    // Hide Top Navigation Bar
     // Code Sourced from StackOverflow
     // https://stackoverflow.com/questions/47150880/hide-navigation-bar-for-a-view-controller
     override func viewWillAppear(_ animated: Bool) {
@@ -81,6 +82,8 @@ class ThemeResultsViewController: UIViewController {
             self.navigationController?.setNavigationBarHidden(true, animated: true)
         }
 
+    // Function called right beofre view/screen disappears
+    // Unhide Navigation bar
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
             // Show the Navigation Bar
